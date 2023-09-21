@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: antiquewhite;
+}   
+#a{
+    height: 300px;
+    width: 300px;
+    color: #31165a;
+    margin-top: 10%;
+    margin-left: 40%;
+    text-align: center;
+    border-radius: 5%;
+    background-image: url("https://i.ibb.co/cCLQHwz/wave.png");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animate 5s linear infinite alternate;
+}
+@keyframes animate{
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+</style>
+<script>
+    var date = new Date;
+    window.onload=( function() {
+    var MyDiv1 = document.getElementById('b');
+    MyDiv1.innerHTML = "Date : "+ date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear();
+    });
+</script>
+<body>
+    <h1 style="text-align: center;">........Dynamic Weather Website........</h1>
+    <div id="a">
+        <h2 id="b">Date : </h2> 
+        <h2> Temperature : {%temp%}</h2>
+        <h2> Weather : {%weath%}</h2>
+    </div>
+</body>
+</html>
